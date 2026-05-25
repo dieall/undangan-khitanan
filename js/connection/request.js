@@ -359,7 +359,7 @@ export const request = (method, path) => {
                     err = new Error('🟥 Network error or rate limit exceeded');
                 }
 
-                alert(err.message ?? String(err));
+                console.warn(err.message ?? String(err));
                 throw err;
             });
         },
